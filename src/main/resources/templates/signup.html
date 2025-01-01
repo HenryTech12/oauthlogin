@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th= "http://www.thymeleaf.org"
+> 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" th:href="@{/css/signup.css}">
+</head>
+
+<body>
+  <!-- Project -->
+  <main class="container">
+    <div class="header">
+       <h2>Registration Form</h2>
+       <label>Fill out the form carefully for registration</label>
+    </div>
+    <form class="content" th:action="@{/register}" method="post" th:object="${userDto}">
+    
+        <span class="error" id="error">
+             <label id="errormsg" th:text="${rMessage}"></label>
+         </span>
+    
+    <div class="fields">
+      <label class="label-header">Name</label>
+       <section class="ctx">
+          <section class="form-content">
+            <input type="text" th:field="*{firstName}">
+            <label class="label-info">First Name</label>
+          </section>
+          
+          <section>
+            <input type="text" th:field="*{lastName}">
+            <label class="label-info">Last Name</label>
+          </section>
+          
+       </section>
+     </div>
+     <label class="label-header">Username</label>
+     <input type="text" placeholder="Username" th:field="*{username}">
+      <div class="fields">
+        <section class="ctx">
+          <section class="form-content">
+            <label class="label-header">Gender</label>
+            <select th:field="*{gender}">
+              <option value="" style="display: none; color: lightgray;">Select Gender</option>
+              <option  value="Male" >Male</option>
+              <option value="Female" >Female</option>
+              <option value="Others">Non-binary</option>
+            </select>
+           </section>
+     
+           <section>
+             <label class="label-header">Email</label>
+             <input type="text" placeholder="example@gmail.com" th:field="*{email}">
+            </section>
+          </section>
+      </div>
+    
+     <div class="fields">
+       <label class="label-header">Phone</label>
+       <section class="ctx s">
+         <section class="form-content">
+           <input type="text" th:field="*{cc}">
+           <label class="label-info">Access code</label>
+         </section>
+
+         <section>
+           <input type="text" th:field="*{phoneNumber}">
+           <label class="label-info">Phone Number</label>
+         </section>
+
+       </section>
+     </div>
+     <label class="label-header">Password</label>
+     <input type="password" th:field="*{password}">
+     <br><br><br>
+     <input type="submit">
+    </form>
+  </main>
+    <script th:src="@{/js/signup.js}"></script>
+</body>
+</html>

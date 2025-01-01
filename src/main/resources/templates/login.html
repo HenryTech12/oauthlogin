@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"
+     xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" th:href="@{/css/login.css}">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <main>
+    <form th:action="@{/login}" th:object="${userDto}" method="post">
+       <header>
+         <h1>Login Form</h1>
+       </header>
+       
+       <label th:if="${logMessage}" style="color:red;">Invalid Username and Password</label>
+      
+       <div class="login-info">
+         <label for="uName">Username</label>
+         <input type="text" th:field="*{username}" id="uName">
+         <label for="Pwd">Password</label>
+         <input type="password" th:field="*{password}" id="Pwd">
+         <section class="box">
+           <input type="checkbox" id="cbox">
+           <span for="cbox">Show Password</span>
+         </section>
+         <input type="submit" value="Login">
+       </div>
+       <section class="footer">
+         <div>
+           <span>Forgot <a th:href="@{/user/reset}">Password?</a></span>
+         </div>
+         <div>
+           <span>Don't have an account? <a th:href="@{/user/signup}">Sign up</a></span>
+         </div>
+         <div class="g-design">
+           <section>
+              OR
+           </section>
+
+           <button type="submit" formaction="/oauth2/authorization/google">
+              <span class="fab fa-google"></span>
+              <span>Continue With Google</span>
+           </button>
+         </div>
+       </section>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* || CSS RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+form {
+  width: 80%;
+  margin: 50% auto;
+  vertical-align: center;
+}
+header {
+  text-align: center;
+  margin: 0.8rem 0;
+  font-family: sans-serif;
+}
+.login-info {
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik";
+}
+.box {
+  display: flex;
+  align-items: center;
+}
+.box span::before {
+  content: " ";
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.login-info input {
+  height: 2rem;
+  margin: 0.8rem 0;
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+  font-family: 'Rubik';
+  border: 1px solid darkgray;
+}
+label {
+  font-family: 'Noto sans';
+}
+input[type=submit ] {
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  font-size:1.1rem;
+  border-radius: 5px;
+  
+}
+.footer {
+  font-family: 'Noto sans';
+}
+.footer div {
+  margin: 0.3rem 0;
+  text-align: center;
+  letter-spacing: 0.1px;
+  font-size: 0.9rem;
+}
+.g-design section {
+   margin-top: 0.8rem;
+}
+.g-design button {
+  margin-top: 0.5rem;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 1.05rem;
+}
+
+/* || STYLING LINKS */
+a, a:visited {
+  color: red;
+}
+a:hover, a:focus {
+  color: #7BEFD4;
+}
+/* || STYLING ICONS */
+.fab {
+  font-size: 25px;
+}
+.g-design button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Nerko One";
+  background: #5D34EB;
+  border: none;
+  outline: none;
+  color: white;
+  box-shadow: 1px 1px 1px 2px lightgray;
+}
