@@ -1,9 +1,8 @@
 # OAuth Login Guide
 
 ## Introduction
-This document explains how to integrate OAuth-based login for authentication in your application.
- OAuth allows secure API authorization without exposing user credentials.
-
+how to integrate OAuth-based login for authentication in your application.
+ OAuth allows secure API authorization.
 ---
 
 ## Prerequisites
